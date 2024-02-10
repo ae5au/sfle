@@ -501,6 +501,8 @@ Internet: https://sfle.ok2cqr.com
 		qso = qso + getAdifTag("MY_IOTA", mySotaWwff);
 	} else if (isPOTA(mySotaWwff)) {
 		qso = qso + getAdifTag("MY_POTA_REF", mySotaWwff);
+	    	qso = qso + getAdifTag("MY_SIG", "POTA");
+	    	qso = qso + getAdifTag("MY_SIG_INFO", mySotaWwff);
     } else if (isWWFF(mySotaWwff)) {
       qso = qso + getAdifTag("MY_WWFF_REF", mySotaWwff);
     }
@@ -511,6 +513,8 @@ Internet: https://sfle.ok2cqr.com
 		qso = qso + getAdifTag("IOTA", item[8]);
 	} else if (isPOTA(item[8])) {
 		qso = qso + getAdifTag("POTA_REF", item[8]);
+	    	qso = qso + getAdifTag("SIG", "POTA");
+	    	qso = qso + getAdifTag("SIG_INFO", item[8]);
     } else if (isWWFF(item[8])) {
       qso = qso + getAdifTag("WWFF_REF", item[8]);
     }
